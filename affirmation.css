@@ -1,0 +1,136 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #ffe6f0, #e0c3fc);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  /* Floating Hearts */
+  .heart {
+    position: absolute;
+    color: #ff69b4;
+    font-size: 1.2rem;
+    animation: floatHearts 10s linear infinite;
+    opacity: 0.4;
+  }
+  
+  @keyframes floatHearts {
+    0% {
+      transform: translateY(100vh) rotate(0deg);
+    }
+    100% {
+      transform: translateY(-10vh) rotate(360deg);
+    }
+  }
+  
+  /* Affirmation Card Container */
+  .container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transition: all 0.3s ease;
+    z-index: 10;
+    position: relative;
+  }
+  
+  /* Heading */
+  h2 {
+    color: #ff69b4;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Affirmation Text */
+  #affirmation {
+    font-size: 1.4rem;
+    color: #6b1e8c;
+    margin: 20px 0;
+    min-height: 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    opacity: 0;
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #ffb6c1;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px #ffb6c1;
+  }
+  
+  button:hover {
+    background-color: #ff69b4;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #ff69b4;
+  }
+  
+  /* Mobile Responsive Styling */
+  @media (max-width: 600px) {
+    body {
+      background: linear-gradient(135deg, #ffe6f0, #e0c3fc);
+      padding: 10px;
+    }
+  
+    .container {
+      padding: 20px;
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    #affirmation {
+      font-size: 1.2rem;
+    }
+  
+    button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Optional - For smaller screens (below 400px), adjust further */
+  @media (max-width: 400px) {
+    h2 {
+      font-size: 1.3rem;
+    }
+  
+    #affirmation {
+      font-size: 1rem;
+    }
+  
+    button {
+      padding: 8px 18px;
+      font-size: 0.8rem;
+    }
+  }
+  
