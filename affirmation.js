@@ -1,4 +1,3 @@
-// 💌 Affirmation logic
 const affirmations = [
    "You’re my forever, and I’m proud of your every step  💞",
     "I admire your heart and your unshakable determination 🌟",
@@ -11,11 +10,11 @@ const affirmations = [
   
   function showAffirmation() {
     const text = affirmations[Math.floor(Math.random() * affirmations.length)];
-    const affirmationEl = document.getElementById("affirmation");
-    affirmationEl.style.opacity = 0; // restart animation
+    const messageElement = document.getElementById("secretMessage");
+    messageElement.style.opacity = 0; 
     setTimeout(() => {
-      affirmationEl.textContent = text;
-      affirmationEl.style.animation = "fadeIn 0.6s ease forwards";
+      messageElement.textContent = text;
+      messageElement.style.animation = "fadeIn 0.6s ease forwards";
     }, 100);
   }
   
